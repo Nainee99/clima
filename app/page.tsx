@@ -1,20 +1,22 @@
 "use client";
 import Image from "next/image";
-import AirPollution from "./components/AirPollution/AirPollution";
-import DailyForecast from "./components/DailyForecast/DailyForecast";
-import FeelsLike from "./components/FeelsLike/FeelsLike";
-import Humidity from "./components/Humidity/Humidity";
-import Mapbox from "./components/Mapbox/Mapbox";
-import Navbar from "./components/Navbar";
-import Population from "./components/Population/Population";
-import Pressure from "./components/Pressure/Pressure";
-import Sunset from "./components/Sunset/Sunset";
-import Temperature from "./components/Temperature/Temperature";
-import UvIndex from "./components/UvIndex/UvIndex";
-import Visibility from "./components/Visibility/Visibility";
-import Wind from "./components/Wind/Wind";
+import {
+  AirPollution,
+  DailyForecast,
+  FeelsLike,
+  FiveDayForecast,
+  Humidity,
+  Mapbox,
+  Navbar,
+  Population,
+  Pressure,
+  Sunset,
+  Temperature,
+  UvIndex,
+  Visibility,
+  Wind,
+} from "./components";
 import defaultStates from "./utils/defaultStates";
-import FiveDayForecast from "./components/FiveDayForecast/FiveDayForecast";
 import { useGlobalContextUpdate } from "./context/globalContext";
 
 export default function Home() {
@@ -51,7 +53,7 @@ export default function Home() {
             <Pressure />
           </div>
           <div className="mapbox-con mt-4 flex gap-4">
-            <Mapbox />
+            {/* <Mapbox /> */}
             <div className="states flex flex-col gap-3 flex-1">
               <h2 className="flex items-center gap-2 font-medium">
                 Top Large Cities
@@ -78,15 +80,7 @@ export default function Home() {
 
       <footer className="py-4 flex justify-center pb-8">
         <p className="footer-text text-sm flex items-center gap-1">
-          Made by
-          <Image src={"/logo-white.svg"} alt="logo" width={20} height={20} />
-          <a
-            href="https://thecodedealer.com"
-            target="_blank"
-            className=" text-green-300 font-bold"
-          >
-            TheCodeDealer
-          </a>
+          Made by Nainee
         </p>
       </footer>
     </main>

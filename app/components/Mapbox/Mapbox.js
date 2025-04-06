@@ -26,22 +26,23 @@ function FlyToActiveCity({ activeCityCords }) {
 }
 
 function Mapbox() {
-  const { forecast } = useGlobalContext(); // Your coordinates
-
+  const { forecast } = useGlobalContext();
   const activeCityCords = forecast?.coord;
 
   if (!forecast || !forecast.coord || !activeCityCords) {
     return (
-      <div>
-        <h1>Loading</h1>
+      <div className="flex-1 basis-[50%] border rounded-lg flex items-center justify-center">
+        <h1>Loading...</h1>
       </div>
     );
   }
 
+  const mapCenter = [activeCityCords.lat, activeCityCords.lon];
+
   return (
     <div className="flex-1 basis-[50%] border rounded-lg">
       <MapContainer
-        center={[activeCityCords.lat, activeCityCords.lon]}
+        center={mapCenter}
         zoom={13}
         scrollWheelZoom={false}
         className="rounded-lg m-4"
@@ -51,7 +52,6 @@ function Mapbox() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-
         <FlyToActiveCity activeCityCords={activeCityCords} />
       </MapContainer>
     </div>
