@@ -1,20 +1,20 @@
 "use client";
 import Image from "next/image";
-import AirPollution from "./Components/AirPollution/AirPollution";
-import DailyForecast from "./Components/DailyForecast/DailyForecast";
-import FeelsLike from "./Components/FeelsLike/FeelsLike";
-import Humidity from "./Components/Humidity/Humidity";
-import Mapbox from "./Components/Mapbox/Mapbox";
-import Navbar from "./Components/Navbar";
-import Population from "./Components/Population/Population";
-import Pressure from "./Components/Pressure/Pressure";
-import Sunset from "./Components/Sunset/Sunset";
-import Temperature from "./Components/Temperature/Temperature";
-import UvIndex from "./Components/UvIndex/UvIndex";
-import Visibility from "./Components/Visibility/Visibility";
-import Wind from "./Components/Wind/Wind";
+import AirPollution from "./components/AirPollution/AirPollution";
+import DailyForecast from "./components/DailyForecast/DailyForecast";
+import FeelsLike from "./components/FeelsLike/FeelsLike";
+import Humidity from "./components/Humidity/Humidity";
+import Mapbox from "./components/Mapbox/Mapbox";
+import Navbar from "./components/Navbar";
+import Population from "./components/Population/Population";
+import Pressure from "./components/Pressure/Pressure";
+import Sunset from "./components/Sunset/Sunset";
+import Temperature from "./components/Temperature/Temperature";
+import UvIndex from "./components/UvIndex/UvIndex";
+import Visibility from "./components/Visibility/Visibility";
+import Wind from "./components/Wind/Wind";
 import defaultStates from "./utils/defaultStates";
-import FiveDayForecast from "./Components/FiveDayForecast/FiveDayForecast";
+import FiveDayForecast from "./components/FiveDayForecast/FiveDayForecast";
 import { useGlobalContextUpdate } from "./context/globalContext";
 
 export default function Home() {
